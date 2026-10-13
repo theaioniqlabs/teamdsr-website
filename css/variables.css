@@ -1,0 +1,102 @@
+:root {
+  /* Color � Team DSR */
+  --color-primary: #b51224;
+  --color-secondary: #555555;
+  --color-bg: #f8f8f7;
+  --color-surface: #ffffff;
+  --color-border: #e8e8e8;
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: rgba(181, 18, 36, 0.08);
+  --color-primary-soft-strong: rgba(181, 18, 36, 0.12);
+  --color-focus-ring: rgba(181, 18, 36, 0.2);
+  --color-overlay: rgba(26, 26, 26, 0.5);
+
+  /* Footer / on-dark */
+  --color-footer-bg: #1a1a1a;
+  --color-footer-surface: rgba(255, 255, 255, 0.06);
+  --color-footer-border: rgba(255, 255, 255, 0.1);
+  --color-footer-text: #ffffff;
+  --color-footer-muted: rgba(255, 255, 255, 0.58);
+  --color-footer-soft: rgba(255, 255, 255, 0.82);
+
+  /* Typography */
+  --font-display: "Syne", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "DM Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --line-height-body: 1.6;
+  --line-height-tight: 1.2;
+  --line-height-heading: 1.12;
+  --letter-label: 0.08em;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-display: clamp(2.25rem, 5.5vw, 3.75rem);
+  --text-section: clamp(1.85rem, 3.5vw, 2.75rem);
+
+  --color-charcoal: #1a1a1a;
+  --color-surface-muted: #f0f0ee;
+  --color-text-faint: #8a8a8a;
+  --color-border-strong: #d4d4d4;
+  --color-primary-hover: #9a0f1e;
+
+  /* Spacing (8px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* Radius � Profile modular system */
+  --radius-xs: 12px;
+  --radius-sm: 16px;
+  --radius-md: 20px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows � soft elevation, large blur */
+  --shadow-sm: 0 4px 16px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 12px 32px rgba(26, 26, 26, 0.06);
+  --shadow-lg: 0 20px 48px rgba(26, 26, 26, 0.08);
+  --shadow-xl: 0 28px 64px rgba(26, 26, 26, 0.1);
+
+  /* Motion */
+  --motion-fast: 150ms;
+  --motion-base: 250ms;
+  --motion-slow: 500ms;
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout — 12-col content rail */
+  --container-content: 1200px;
+  --container-max: 1200px;
+  --grid-columns: 12;
+  --grid-gutter: 1rem;
+  --page-inline: clamp(1rem, 4vw, 2rem);
+  --header-height: 84px;
+  --breakpoint-desktop: 1024px;
+
+  /* Z-index */
+  --z-header: 100;
+  --z-mega: 110;
+  --z-mobile: 120;
+  --z-search: 130;
+  --z-skip: 200;
+}

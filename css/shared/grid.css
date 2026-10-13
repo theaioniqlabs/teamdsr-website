@@ -1,0 +1,70 @@
+/* Shared 12-column content rail */
+
+.td-rail {
+  width: min(calc(100% - 2 * var(--page-inline)), var(--container-content));
+  margin-inline: auto;
+}
+
+.td-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  column-gap: var(--grid-gutter);
+  row-gap: var(--grid-gutter);
+}
+
+/* Base spans (mobile-first = stacked unless overridden) */
+.td-span-1 { grid-column: span 1; }
+.td-span-2 { grid-column: span 2; }
+.td-span-3 { grid-column: span 3; }
+.td-span-4 { grid-column: span 4; }
+.td-span-5 { grid-column: span 5; }
+.td-span-6 { grid-column: span 6; }
+.td-span-7 { grid-column: span 7; }
+.td-span-8 { grid-column: span 8; }
+.td-span-9 { grid-column: span 9; }
+.td-span-10 { grid-column: span 10; }
+.td-span-11 { grid-column: span 11; }
+.td-span-12 { grid-column: span 12; }
+
+@media (min-width: 640px) {
+  :root {
+    --grid-gutter: 1.5rem;
+  }
+
+  .td-span-md-1 { grid-column: span 1; }
+  .td-span-md-2 { grid-column: span 2; }
+  .td-span-md-3 { grid-column: span 3; }
+  .td-span-md-4 { grid-column: span 4; }
+  .td-span-md-5 { grid-column: span 5; }
+  .td-span-md-6 { grid-column: span 6; }
+  .td-span-md-7 { grid-column: span 7; }
+  .td-span-md-8 { grid-column: span 8; }
+  .td-span-md-9 { grid-column: span 9; }
+  .td-span-md-10 { grid-column: span 10; }
+  .td-span-md-11 { grid-column: span 11; }
+  .td-span-md-12 { grid-column: span 12; }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --grid-gutter: 2rem;
+  }
+
+  .td-span-lg-1 { grid-column: span 1; }
+  .td-span-lg-2 { grid-column: span 2; }
+  .td-span-lg-3 { grid-column: span 3; }
+  .td-span-lg-4 { grid-column: span 4; }
+  .td-span-lg-5 { grid-column: span 5; }
+  .td-span-lg-6 { grid-column: span 6; }
+  .td-span-lg-7 { grid-column: span 7; }
+  .td-span-lg-8 { grid-column: span 8; }
+  .td-span-lg-9 { grid-column: span 9; }
+  .td-span-lg-10 { grid-column: span 10; }
+  .td-span-lg-11 { grid-column: span 11; }
+  .td-span-lg-12 { grid-column: span 12; }
+}
+
+/* Full-bleed decorative wrapper (backgrounds stay edge-to-edge) */
+.td-bleed {
+  width: 100%;
+}

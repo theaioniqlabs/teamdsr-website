@@ -1,0 +1,51 @@
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="/" aria-label="Team DSR home">
+      <img
+        data-site-asset="assets/logo/TD-Logo.png"
+        alt="Team DSR"
+        width="140"
+        height="48"
+        decoding="async"
+      />
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary" data-primary-nav>
+      <!-- Populated by header.js -->
+    </nav>
+
+    <div class="site-header__actions">
+      <button
+        type="button"
+        class="site-header__icon-btn"
+        data-search-open
+        aria-label="Open search"
+        aria-expanded="false"
+        aria-controls="search-overlay"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+          <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <a class="site-header__cta" href="/contact" data-header-cta>Contact</a>
+
+      <button
+        type="button"
+        class="site-header__icon-btn site-header__menu-toggle"
+        data-mobile-open
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-header__mega-slot" data-mega-slot></div>
+  <div class="site-header__mobile-slot" data-mobile-slot></div>
+</header>

@@ -1,0 +1,33 @@
+<div
+  id="mobile-menu"
+  class="mobile-menu"
+  data-mobile-menu
+  hidden
+  aria-hidden="true"
+>
+  <div class="mobile-menu__backdrop" data-mobile-backdrop></div>
+  <div
+    class="mobile-menu__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Site menu"
+    data-mobile-panel
+  >
+    <div class="mobile-menu__top">
+      <p class="mobile-menu__heading">Menu</p>
+      <button
+        type="button"
+        class="mobile-menu__close"
+        data-mobile-close
+        aria-label="Close menu"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile" data-mobile-nav>
+      <!-- Populated by mobile-menu.js -->
+    </nav>
+  </div>
+</div>

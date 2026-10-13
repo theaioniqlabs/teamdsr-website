@@ -1,0 +1,70 @@
+<div
+  id="search-overlay"
+  class="search-overlay"
+  data-search-overlay
+  hidden
+  aria-hidden="true"
+>
+  <div class="search-overlay__backdrop" data-search-backdrop></div>
+  <div
+    class="search-overlay__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="search-overlay-title"
+    data-search-dialog
+  >
+    <div class="search-overlay__top">
+      <h2 id="search-overlay-title" class="search-overlay__title">Search</h2>
+      <button
+        type="button"
+        class="search-overlay__close"
+        data-search-close
+        aria-label="Close search"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <form class="search-overlay__form" data-search-form action="#" method="get" role="search">
+      <label class="visually-hidden" for="site-search-input">Search the site</label>
+      <input
+        id="site-search-input"
+        class="search-overlay__input"
+        type="search"
+        name="q"
+        placeholder="Search Team DSR…"
+        autocomplete="off"
+        data-search-input
+      />
+      <button type="submit" class="search-overlay__submit">Search</button>
+    </form>
+
+    <p class="search-overlay__shortcuts">
+      <kbd class="search-overlay__kbd">Ctrl</kbd>
+      <span class="search-overlay__plus">+</span>
+      <kbd class="search-overlay__kbd">K</kbd>
+      <span class="search-overlay__shortcut-label">to open</span>
+      <span class="search-overlay__dot" aria-hidden="true">·</span>
+      <kbd class="search-overlay__kbd">Esc</kbd>
+      <span class="search-overlay__shortcut-label">to close</span>
+    </p>
+
+    <div class="search-overlay__blocks">
+      <section class="search-overlay__block" aria-labelledby="search-recent-title">
+        <h3 id="search-recent-title" class="search-overlay__block-title">Recent searches</h3>
+        <ul class="search-overlay__list">
+          <li class="search-overlay__empty">No recent searches yet</li>
+        </ul>
+      </section>
+
+      <section class="search-overlay__block" aria-labelledby="search-suggested-title">
+        <h3 id="search-suggested-title" class="search-overlay__block-title">Suggested pages</h3>
+        <ul class="search-overlay__list" data-search-suggested>
+          <!-- Populated by search.js from navigation -->
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "teamdsr-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TEAM DSR Executorrs LLP corporate website",
+  "scripts": {
+    "dev": "npx serve . --listen 8080 --no-port-switching",
+    "fonts:sync": "node scripts/sync-fonts.js",
+    "review:ui": "npx 21st review index.html about contact --json",
+    "21st:whoami": "npx 21st whoami"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/syne": "^5.3.0",
+    "lucide": "^1.52.0"
+  },
+  "devDependencies": {
+    "@21st-dev/cli": "^1.17.1",
+    "serve": "^14.2.6"
+  }
+}

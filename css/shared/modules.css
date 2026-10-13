@@ -1,0 +1,193 @@
+/* Shared Profile modules — cut corners, icon wells, text links */
+
+.mod {
+  border-radius: var(--radius-lg);
+}
+
+.mod--cut-tr {
+  border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg);
+}
+
+.mod--cut-bl {
+  border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) 0;
+}
+
+.mod--cut-tl {
+  border-radius: var(--radius-lg) 0 var(--radius-lg) var(--radius-lg);
+}
+
+.mod--cut-br {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 var(--radius-lg);
+}
+
+.mod--xl.mod--cut-tr {
+  border-radius: 0 var(--radius-xl) var(--radius-xl) var(--radius-xl);
+}
+
+.mod--xl.mod--cut-bl {
+  border-radius: var(--radius-xl) var(--radius-xl) var(--radius-xl) 0;
+}
+
+.td-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  transition: background var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard);
+}
+
+.td-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.td-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.td-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.td-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.td-link__arrow {
+  transition: transform var(--motion-fast) var(--ease-standard);
+}
+
+.td-link:hover .td-link__arrow {
+  transform: translateX(3px);
+}
+
+.td-card-surface {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--motion-base) var(--ease-standard),
+    border-color var(--motion-base) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .td-card-surface:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+    box-shadow: var(--shadow-md);
+  }
+
+  .td-card-surface:hover .td-icon {
+    background: var(--color-primary-soft-strong);
+  }
+}
+
+/* V2 shared layout utilities */
+.sol-section--band {
+  padding: var(--space-8) 0;
+  margin-inline: calc(-1 * var(--page-inline));
+  padding-inline: var(--page-inline);
+  background: var(--color-surface-muted);
+}
+
+.sol-punch {
+  margin: 0 0 var(--space-8);
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  background: var(--color-charcoal);
+  color: #fff;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg);
+}
+
+.sol-punch--red {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.sol-punch__text {
+  margin: 0;
+  max-width: 36rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.sol-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .sol-split {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: var(--space-8);
+  }
+}
+
+/* Quiet chrome — marker + rule only */
+.sol-page--quiet .sol-page__blob,
+.expo-page--quiet .expo-page__blob,
+.about-page--quiet .about-page__blob {
+  display: none;
+}
+
+.sol-page--quiet .sol-page__footer-bar,
+.expo-page--quiet .expo-page__footer-bar {
+  display: none;
+}
+
+/* Enquiry compact (Solutions children) */
+.sol-enquiry--compact .sol-enquiry__band {
+  padding: clamp(1.15rem, 2.2vw, 1.5rem) clamp(1.25rem, 2.5vw, 1.75rem);
+  gap: var(--space-4);
+}
+
+.sol-enquiry--compact .sol-enquiry__band h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  margin-bottom: var(--space-1);
+}
+
+.sol-enquiry--compact .sol-enquiry__band p {
+  font-size: var(--text-sm);
+}
+
+.sol-enquiry--compact .sol-enquiry__marker {
+  margin-bottom: var(--space-2);
+}
+
+/* Stub nav labels */
+.mega-menu__link--stub,
+.mobile-menu__child-link--stub,
+.site-footer__link--stub {
+  cursor: default;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.mega-menu__link--stub:hover,
+.mobile-menu__child-link--stub:hover {
+  background: transparent;
+}

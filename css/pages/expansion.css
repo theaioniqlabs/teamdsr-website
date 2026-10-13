@@ -1,0 +1,507 @@
+/* Our Expansion — real Leaflet India + world maps (PDF p4) */
+
+.page-expansion {
+  background: #ffffff;
+}
+
+.page-expansion .site-header.is-scrolled {
+  background: #ffffff;
+}
+
+.page-expansion #site-main.exp-page {
+  position: relative;
+  max-width: none;
+  margin-inline: 0;
+  padding: 0;
+  overflow-x: clip;
+  background: #ffffff;
+}
+
+.exp-page__inner {
+  width: min(calc(100% - 2 * var(--page-inline)), var(--container-content));
+  margin-inline: auto;
+  padding: var(--space-6) 0 var(--space-9);
+}
+
+.exp-page__rule {
+  height: 2px;
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  background: var(--color-primary);
+  border-radius: 1px;
+}
+
+.exp-page__marker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-label);
+  text-transform: uppercase;
+}
+
+.exp-page__marker-label {
+  color: var(--color-primary);
+}
+
+.exp-page__marker::after {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 1px;
+}
+
+/* Hero */
+.exp-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+  margin-bottom: var(--space-10);
+}
+
+.exp-page__title {
+  display: block;
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 4.75rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.exp-page__title-stack {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+}
+
+.exp-page__title-line {
+  display: block;
+}
+
+.exp-hero__body {
+  margin: 0;
+  max-width: 40rem;
+  font-size: var(--text-md);
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+.exp-hero__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 28rem;
+}
+
+.exp-punch {
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  background: var(--color-charcoal);
+  color: #fff;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg);
+}
+
+.exp-punch__line {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.exp-punch__line--accent {
+  margin-top: var(--space-2);
+  opacity: 0.92;
+}
+
+.exp-hero__jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Sections */
+.exp-section {
+  margin-bottom: var(--space-11);
+  scroll-margin-top: calc(var(--header-height) + var(--space-5));
+}
+
+.exp-section__head {
+  margin-bottom: var(--space-6);
+}
+
+.exp-section__title {
+  margin: 0;
+  font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+}
+
+/* Map block layout */
+.exp-map-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+.exp-leaflet {
+  width: 100%;
+  min-height: 18rem;
+  border-radius: 0 var(--radius-xl) var(--radius-xl) var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: #e8e8e6;
+  z-index: 0;
+}
+
+.exp-leaflet--india {
+  min-height: 22rem;
+}
+
+.exp-leaflet--world {
+  min-height: 16rem;
+}
+
+.exp-leaflet .leaflet-control-zoom a {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  line-height: 2.5rem !important;
+  color: var(--color-text) !important;
+  border-color: var(--color-border) !important;
+}
+
+.exp-leaflet .leaflet-control-zoom a:hover {
+  color: var(--color-primary) !important;
+}
+
+.exp-map-block__meta {
+  min-width: 0;
+}
+
+.exp-map__count {
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.exp-map__count strong {
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.exp-map__attr {
+  margin: var(--space-5) 0 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  line-height: 1.45;
+}
+
+.exp-map__attr a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.exp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.exp-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition:
+    background var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard);
+}
+
+.exp-chip:hover,
+.exp-chip:focus-visible,
+.exp-chip.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  outline: none;
+}
+
+.exp-regions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.exp-region__country {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Pulse markers */
+.exp-marker-wrap {
+  background: transparent !important;
+  border: none !important;
+}
+
+.exp-marker {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.exp-marker__core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(26, 26, 26, 0.28);
+  z-index: 2;
+}
+
+.exp-marker__ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: rgba(181, 18, 36, 0.45);
+  z-index: 1;
+  animation: exp-pulse 2.4s var(--ease-standard) infinite;
+  animation-delay: var(--exp-delay, 0s);
+}
+
+.exp-marker.is-active .exp-marker__core {
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: var(--color-primary-hover);
+}
+
+.exp-marker.is-active .exp-marker__ring {
+  animation-duration: 1.4s;
+  background: rgba(181, 18, 36, 0.55);
+}
+
+@keyframes exp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+.exp-popup .leaflet-popup-content-wrapper {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 0;
+}
+
+.exp-popup .leaflet-popup-content {
+  margin: 0.55rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.exp-popup .leaflet-popup-content strong {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+}
+
+.exp-popup .leaflet-popup-tip {
+  box-shadow: none;
+}
+
+/* Enquiry */
+.exp-enquiry__band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--color-charcoal);
+  color: #fff;
+}
+
+.exp-enquiry__marker {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.exp-enquiry__band h2 {
+  margin: 0 0 var(--space-3);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: #fff;
+}
+
+.exp-enquiry__band p {
+  margin: 0;
+  max-width: 32rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+}
+
+.exp-enquiry__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  white-space: nowrap;
+  justify-self: start;
+  transition: background var(--motion-fast) var(--ease-standard);
+}
+
+.exp-enquiry__btn:hover {
+  background: var(--color-primary-hover);
+}
+
+.exp-enquiry__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (min-width: 720px) {
+  .exp-hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(14rem, 0.85fr);
+    gap: var(--space-8);
+    align-items: end;
+  }
+
+  .exp-hero__aside {
+    justify-self: end;
+  }
+
+  .exp-map-block {
+    grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  .exp-leaflet--india {
+    min-height: 28rem;
+  }
+
+  .exp-leaflet--world {
+    min-height: 22rem;
+  }
+
+  .exp-regions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .exp-enquiry__band {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .exp-enquiry__btn {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1100px) {
+  .exp-page__inner {
+    padding: var(--space-7) 0 var(--space-10);
+  }
+
+  .exp-leaflet--india {
+    min-height: 32rem;
+  }
+
+  .exp-regions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 719px) {
+  .exp-page__inner {
+    padding: var(--space-5) 0 var(--space-7);
+  }
+
+  .exp-page__title {
+    font-size: clamp(2rem, 9.5vw, 3.25rem);
+  }
+
+  .exp-leaflet {
+    border-radius: 0 var(--radius-lg) var(--radius-lg) var(--radius-lg);
+    min-height: 16rem;
+  }
+
+  .exp-leaflet--india {
+    min-height: 18rem;
+  }
+
+  .exp-enquiry__btn {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exp-marker__ring,
+  .exp-marker--static .exp-marker__ring {
+    animation: none !important;
+    opacity: 0.35;
+    transform: scale(2);
+  }
+
+  .exp-chip,
+  .exp-enquiry__btn {
+    transition: none;
+  }
+}

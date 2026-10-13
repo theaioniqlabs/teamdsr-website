@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Expansion — TEAM DSR Executorrs LLP</title>
+    <meta
+      name="description"
+      content="TEAM DSR footprint across India and globally — exhibitions, events, and execution in cities nationwide and abroad."
+    />
+    <link rel="icon" type="image/png" href="../../assets/logo/favicon.png" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="../../css/pages/expansion.css" />
+  </head>
+  <body class="page-expansion">
+    <a class="skip-link" href="#site-main">Skip to content</a>
+
+    <div class="site-shell">
+      <div id="site-header"></div>
+      <div id="site-search"></div>
+
+      <main id="site-main" class="exp-page" tabindex="-1">
+        <div class="exp-page__inner">
+          <div class="exp-page__rule" aria-hidden="true"></div>
+
+          <header class="exp-hero">
+            <div class="exp-hero__copy" data-reveal>
+              <p class="exp-page__marker">
+                <span class="exp-page__marker-label">Our Expansion</span>
+              </p>
+              <h1 class="exp-page__title">
+                <span class="exp-page__title-stack">
+                  <span class="exp-page__title-line">Our</span>
+                  <span class="exp-page__title-line">Expansion</span>
+                </span>
+              </h1>
+              <p class="exp-hero__body">
+                TEAM DSR has delivered work across multiple cities in India and
+                abroad, supporting projects in exhibitions, events, and related
+                execution environments. Our footprint reflects both operational
+                reach and the ability to handle diverse formats and locations.
+              </p>
+            </div>
+
+            <aside class="exp-hero__aside" data-reveal aria-label="Reach">
+              <div class="exp-punch mod--cut-tr">
+                <p class="exp-punch__line">Across India.</p>
+                <p class="exp-punch__line exp-punch__line--accent">Across the Globe.</p>
+              </div>
+              <ul class="exp-hero__jumps">
+                <li><a class="td-link" href="#national">National map <span aria-hidden="true">→</span></a></li>
+                <li><a class="td-link" href="#global">Global map <span aria-hidden="true">→</span></a></li>
+              </ul>
+            </aside>
+          </header>
+
+          <section class="exp-section" id="national" aria-labelledby="exp-national-title">
+            <header class="exp-section__head" data-reveal>
+              <p class="exp-page__marker">
+                <span class="exp-page__marker-label">National</span>
+              </p>
+              <h2 id="exp-national-title" class="exp-section__title td-display">Across India</h2>
+            </header>
+            <div class="exp-map-block" data-exp-national>
+              <div
+                id="exp-map-india"
+                class="exp-leaflet exp-leaflet--india"
+                role="img"
+                aria-label="Map of India showing TEAM DSR city locations"
+              ></div>
+              <div class="exp-map-block__meta">
+                <p class="exp-map__count" data-exp-national-count></p>
+                <ul class="exp-chips" data-exp-national-chips data-stagger></ul>
+                <p class="exp-map__attr">
+                  Basemap tiles &copy; <a href="https://www.esri.com/" rel="noopener noreferrer">Esri</a>
+                  (Esri, HERE, Garmin, FAO, NOAA, USGS).
+                  Boundary data derived from open country GeoJSON.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="exp-section" id="global" aria-labelledby="exp-global-title">
+            <header class="exp-section__head" data-reveal>
+              <p class="exp-page__marker">
+                <span class="exp-page__marker-label">Global</span>
+              </p>
+              <h2 id="exp-global-title" class="exp-section__title td-display">Across the Globe</h2>
+            </header>
+            <div class="exp-map-block exp-map-block--global" data-exp-global>
+              <div
+                id="exp-map-world"
+                class="exp-leaflet exp-leaflet--world"
+                role="img"
+                aria-label="World map showing TEAM DSR international locations"
+              ></div>
+              <div class="exp-map-block__meta">
+                <p class="exp-map__count" data-exp-global-count></p>
+                <div class="exp-regions" data-exp-global-regions></div>
+                <p class="exp-map__attr">
+                  Basemap tiles &copy; <a href="https://www.esri.com/" rel="noopener noreferrer">Esri</a>
+                  (Esri, HERE, Garmin, FAO, NOAA, USGS).
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="exp-enquiry" aria-labelledby="exp-enquiry-title">
+            <div class="exp-enquiry__band mod mod--xl mod--cut-bl" data-reveal>
+              <div>
+                <p class="exp-enquiry__marker">Contact</p>
+                <h2 id="exp-enquiry-title" class="td-display">Ready to plan the next show?</h2>
+                <p>Tell us about your exhibition, event, or technology need.</p>
+              </div>
+              <a class="exp-enquiry__btn" href="/contact">Send enquiry</a>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <div id="site-footer"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script type="module" src="../../js/app.js"></script>
+    <script type="module" src="../../js/pages/expansion.js"></script>
+  </body>
+</html>
